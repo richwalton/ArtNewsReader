@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Art Feed Reader</title>
+</head>
+<body onload="fetchBookmarks()">
+    <div class="container">
+        <h1 class="app-title">Article Feed Reader</h1>
+        <div class="feeds-container">
+            <div class="row-1">
+                <main class="art-news-paper">
+                    <header>
+                        <div id="anImg" class="image-fav"><img src="img/the-art-newspaper-logo.png" alt="" class="favicon"/></div>
+                        <h3 class="feed-title">Art Newspaper</h3>
+                    </header>
+                    <div class="feed-group">
+                            <% for(var i = 0; i < artNP.length; i++) {%>
+                            <div class="article-group article-group:after" >
+                            <h3 class="article-title article-link article-link:hover">
+                                <a href="<%= artNP[i].linkUrl %> " target="_blank" rel="noopener" class="article-link"><%= artNP[i].title %></a>
+                            </h3>
+                            <img class="article-img" src="<%= artNP[i].imgUrl%>" >
+                            <p class="article-desc"><%= artNP[i].descript %></p>
+                            </div>  
+                            <% } %>
+                    </div>
+                </main> 
+
+                <main class="art-news">
+                    <header>
+                        <div class="image-fav"><img src="https://www.artnews.com/wp-content/themes/vip/pmc-artnews-2019/assets/app/icons/favicon.png" alt="" class="favicon"></div>
+                        <h3 class="feed-title">Art News</h3>
+                    </header>
+                    <div class="feed-group">
+                            <% for(var i = 0; i < artNews.length; i++) {%>
+                            <div class="article-group article-group:after" >  
+                            <h3 class="article-title article-link article-link:hover">
+                                <a href="<%= artNews[i].linkUrl %> " target="_blank" rel="noopener" class="article-link"><%= artNews[i].title %></a>
+                            </h3>
+                            <img class="article-img" src="<%= artNews[i].imgUrl%>" >
+                            <p class="article-desc"><%= artNews[i].descript %></p>
+                            </div>  
+                            <% } %>
+                    </div>
+                </main> 
+
+                <main class="art-net">
+                    <header>
+                        <div class="image-fav"><img src="http://www.artnet.com/media/redesign/img/logo_brand.svg?v=2" alt="" class="favicon"></div>
+                        <h3 class="feed-title">Art Net</h3>
+                    </header>
+                    <div class="feed-group">
+                            <% for(var i = 0; i < artNet.length; i++) {%>
+                            <div class="article-group article-group:after" >  
+                            <h3 class="article-title article-link article-link:hover">
+                                <a href="<%= artNet[i].linkUrl %> " target="_blank" rel="noopener" class="article-link"><%= artNet[i].title %></a>
+                            </h3>
+                            <img class="article-img" src="<%= artNet[i].imgUrl%>" >
+                            <p class="article-desc"><%= artNet[i].descript %></p>
+                            </div>  
+                            <% } %>
+                    </div>  
+                </main> 
+            </div>
+            <!------------- ****** --- Second Row --- ****** ---------------->
+            <div class="row-2">
+                <main class="hyper-allergic">
+                    <header>
+                        <div id="anImg" class="image-fav"><img src="img/Hyperallergic_Cyan.png" alt="" class="favicon"/></div>
+                        <h3 class="feed-title">Hyper Allergic</h3>
+                    </header>
+                    <div class="feed-group">
+                            <% for(var i = 0; i < hyperAll.length; i++) {%>
+                            <div class="article-group article-group:after" >
+                            <h3 class="article-title article-link article-link:hover">
+                                <a href="<%= hyperAll[i].linkUrl %> " target="_blank" rel="noopener" class="article-link"><%= hyperAll[i].title %></a>
+                            </h3>
+                            <img class="article-img" src="<%= hyperAll[i].imgUrl%>" >
+                            <p class="article-desc"><%= hyperAll[i].descript %></p>
+                            </div>  
+                            <% } %>
+                    </div>
+                </main> 
+
+                <main class="artsy">
+                    <header>
+                        <div class="image-fav"><img src="img/artsy-logo-sqr.jpg" alt="" class="favicon"></div>
+                        <h3 class="feed-title">Artsy</h3>
+                    </header>
+                    <div class="feed-group">
+                            <% for(var i = 0; i <  artsy.length; i++) {%>
+                            <div class="article-group article-group:after" >  
+                            <h3 class="article-title article-link article-link:hover">
+                                <a href="<%=  artsy[i].linkUrl %> " target="_blank" rel="noopener" class="article-link"><%=  artsy[i].title %></a>
+                            </h3>
+                            <div class="article-img" style="<%= artsy[i].imgUrl%>"></div>
+                            <p class="article-desc"><%=  artsy[i].descript %></p>
+                            </div>  
+                            <% } %>
+                    </div>
+                </main> 
+                
+                <main class="art-forum">
+                    <header>
+                        <div class="image-fav"><img src="img/artforum_logo.png" alt="" class="favicon"></div>
+                        <h3 class="feed-title">Art Forum</h3>
+                    </header>
+                    <div class="feed-group">
+                            <% for(var i = 0; i < artForum.length; i++) {%>
+                            <div class="article-group article-group:after" >  
+                            <h3 class="article-title article-link article-link:hover">
+                                <a href="<%= artForum[i].linkUrl %> " target="_blank" rel="noopener" class="article-link"><%= artForum[i].title %></a>
+                            </h3>
+                            <img class="article-img" src="https:<%= artForum[i].imgUrl%>">
+                            
+                            <p class="article-desc"><%= artForum[i].descript %></p>
+                            </div>  
+                            <% } %>
+                    </div>  
+                </main> 
+            </div>
+            <!------------- ****** --- Third Row --- ****** ---------------->
+            <div class="row-3">
+                <main class="saved_Links">
+                    <header>
+                        <h3 class="feed-title">Saved Links</h3>
+                    </header>
+                    <div class="saved-links">
+                            <form id="linkForm">
+                                <div class="form-group">
+                                  <label>Link Name: </label>
+                                  <input class="link-input" type="text" id="linkName" placeholder="Link Name">
+                                </div>
+                                <div class="form-group">
+                                  <label>Link Url: </label>
+                                  <input class="link-input" type="text" id="linkUrl" placeholder="Link Url">
+                                </div>
+                                <button type="submit" class="link-btn">Save Bookmark</button>
+                                <p id="my-error-message-container" class="error" style=" display: none;"></p>
+                            </form>
+                            <div class="saved-links">
+                                <h3>Saved Bookmarks:</h3>
+                                <div class="bottom-links" id="bookmarksResults"></div>
+                            </div>
+                    </div>
+                </main> 
+
+                <main class="other_Links ">
+                    <header>
+                        <h3 class="feed-title">Other Resources</h3>
+                    </header>
+                    <div class="other-resources">
+                            <div class="resources">
+                                <div><a href="https://www.thisiscolossal.com/category/art/" target="blank">Colossal</a></div>
+                                <div><a href="https://www.juxtapoz.com/news/" target="blank">Juxtapoz</a></div>
+                                <div><a href="https://flash---art.com/" target="blank">Flash Art</a></div>
+                                <div><a href="https://www.frieze.com/" target="blank">Frieze</a></div>
+                            </div>
+                            <div class="resources">
+                                <div><a href="https://artreview.com/" target="blank">Art Review</a></div>
+                                <div><a href="https://www.artnews.com/c/art-in-america/" target="blank">Art In America</a></div>
+                                <div><a href="https://bombmagazine.org/ " target="blank">Bomb</a></div>
+                            </div>
+                    </div>
+                </main> 
+            </div>      
+        </div>
+    </div>
+    <script src="/main.js" async defer></script>
+</body>
+</html>
