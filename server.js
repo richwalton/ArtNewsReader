@@ -45,8 +45,13 @@ MongoClient.connect(mongoArtData, { useUnifiedTopology: true })
 
     // Listen
     // ========================
-    app.listen(4000, function() {
-        console.log('listening on 4000')
-    }) 
+    let port = process.env.PORT;
+    if (port == null || port == "") {
+      port = 8000;
+    }
+    app.listen(port);
+    // app.listen(4000, function() {
+    //     console.log('listening on 4000')
+    // }) 
 })
 .catch(error => console.error(error));

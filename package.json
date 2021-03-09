@@ -1,5 +1,5 @@
 {
-  "name": "simple-crud",
+  "name": "art-news-reader",
   "version": "1.0.0",
   "description": "Simple Vanilla JS app to perform CRUD operations on MongoDb Database without Mongoose but using Express for the server.",
   "main": "index.js",
