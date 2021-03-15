@@ -104,6 +104,14 @@ article {
     padding:60px 0 20px;
 }
 
+.app-description {
+    color: #747474;
+    font-size: 1.8em;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 25px;
+}
+
 .feed-title {
     color:rgb(82, 159, 160);
     font-size: 3em;
